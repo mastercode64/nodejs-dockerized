@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./project-folder:/usr/src/app/txt-files
+    container_name: nodejs
+    ports:
+      - "8080:8080"
